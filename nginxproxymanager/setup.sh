@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 TMP=/tmp/npm_install.sh
-URL=/root
+URL=https://raw.githubusercontent.com/raratdev/Scripts/nginxproxymanager/install
 
 if [ "$(uname)" != "Linux" ]; then
   echo "OS NOT SUPPORTED"
