@@ -93,7 +93,7 @@ _distro_release=$(wget $WGETOPT "http://openresty.org/package/$DISTRO_ID/dists/"
 if [ $DISTRO_ID = "ubuntu" ]; then
   echo "deb [trusted=yes] http://openresty.org/package/$DISTRO_ID ${_distro_release:-focal} main" | tee /etc/apt/sources.list.d/openresty.list
 else
-  echo "deb [trusted=yes] http://openresty.org/package/$DISTRO_ID ${_distro_release:-bullseye} openresty" | tee /etc/apt/sources.list.d/openresty.list
+  echo "deb [trusted=yes] http://openresty.org/package/$DISTRO_ID ${_distro_release:-bookworm} openresty" | tee /etc/apt/sources.list.d/openresty.list
 fi
 runcmd apt-get update && apt-get install -y -q --no-install-recommends openresty
 
