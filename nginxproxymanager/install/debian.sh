@@ -102,12 +102,12 @@ log "Installing nodejs"
 #runcmd wget -qO - https://raw.githubusercontent.com/raratdev/Scripts/main/nginxproxymanager/nodejs/setup_20.x | bash -
 #runcmd apt-get install -y -q --no-install-recommends nodejs
 #runcmd npm install --global yarn
-runcmd apt-get update && apt-get install -y ca-certificates curl gnupg
-runcmd curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-runcmd echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
-runcmd curl -fsSL https://deb.nodesource.com/setup_current.x | -E bash -
-runcmd curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor -o /usr/share/keyrings/yarn-archive-keyring.gpg
-runcmd echo "deb [signed-by=/usr/share/keyrings/yarn-archive-keyring.gpg] https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+#runcmd apt-get update && apt-get install -y ca-certificates curl gnupg
+#runcmd curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+#runcmd echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+runcmd curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+runcmd curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo gpg --dearmor -o /usr/share/keyrings/yarn-archive-keyring.gpg
+runcmd echo "deb [signed-by=/usr/share/keyrings/yarn-archive-keyring.gpg] https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 runcmd apt-get update && apt-get install -y yarn nodejs
 
 # Get latest version information for nginx-proxy-manager
