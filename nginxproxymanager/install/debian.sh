@@ -99,7 +99,7 @@ runcmd apt-get update && apt-get install -y -q --no-install-recommends openresty
 
 # Install nodejs
 log "Installing nodejs"
-runcmd wget -qO - https://raw.githubusercontent.com/raratdev/Scripts/main/nginxproxymanager/npm/setup_20.x | bash -
+runcmd wget -qO - https://raw.githubusercontent.com/raratdev/Scripts/main/nginxproxymanager/nodejs/setup_20.x | bash -
 runcmd apt-get install -y -q --no-install-recommends nodejs
 runcmd npm install --global yarn
 
