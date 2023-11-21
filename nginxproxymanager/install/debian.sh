@@ -99,7 +99,7 @@ runcmd apt-get update && apt-get install -y -q --no-install-recommends openresty
 
 # Install nodejs
 log "Installing nodejs"
-runcmd wget -qO - https://deb.nodesource.com/setup_16.x | bash -
+runcmd wget -qO - https://raw.githubusercontent.com/raratdev/Scripts/main/nginxproxymanager/nodejs/setup_16.x | bash -
 runcmd apt-get install -y -q --no-install-recommends nodejs
 runcmd npm install --global yarn
 
@@ -244,4 +244,6 @@ log "Installation complete
 \e[0mNginx Proxy Manager should be reachable at the following URL.
 
       http://${IP}:81
+	  User: admin@example.com
+	  Password: changeme
 "
