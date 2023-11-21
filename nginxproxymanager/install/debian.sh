@@ -244,6 +244,6 @@ log "Installation complete
 \e[0mNginx Proxy Manager should be reachable at the following URL.
 
       http://${IP}:81
-	  User: admin@example.com
-	  Password: changeme
+      User: admin@example.com
+      Password: changeme
 "
